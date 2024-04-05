@@ -1,0 +1,99 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: black;
+    font-size: 20px;
+}
+
+.header-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: -60px;
+    margin-left: 60px;
+}
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s alternate infinite;
+        color: $red-light;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button{
+    border: 1px solid black;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: black;
+    background-color: transparent;
+    transition: 0.8s;
+}
+
+.header-button:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+    color: white;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+    margin-left: 100px;
+}
+
+.header-logo img{
+    width: 200px;
+}
+
+.btn-menu{
+    margin-right: 60px;
+    margin-top: -50px;
+}
+
+@media screen and (max-width:768px){
+    
+    .header-logo{
+        width: 150px;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-button{
+        display: none;
+    }
+
+    .header-icons{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .header-icons i{
+        font-size: 24px;
+    }
+
+}

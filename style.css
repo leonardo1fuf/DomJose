@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: black;
+  font-size: 20px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: -60px;
+  margin-left: 60px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s alternate infinite;
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: black;
+  background-color: transparent;
+  transition: 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+  color: white;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-left: 100px;
+}
+
+.header-logo img {
+  width: 200px;
+}
+
+.btn-menu {
+  margin-right: 60px;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo {
+    width: 150px;
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-button {
+    display: none;
+  }
+  .header-icons {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .header-icons i {
+    font-size: 24px;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../assets/barbearia-machismo.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-position: 50% 0;
+}
+
+.hero {
+  color: black;
+  min-height: 73vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 47px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0px;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: white;
+  background-color: rgb(255, 45, 45);
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 81vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero {
+    min-height: 78vh;
+  }
+}
+.about {
+  background-color: white;
+  overflow: hidden;
+  color: black;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.services {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircuts img {
+  width: 200px;
+  height: 200px;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(31, 31, 31);
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+.haircut img {
+  width: 100%;
+  transition: transform 0.25s;
+}
+.haircut strong {
+  font-size: 12px;
+}
+
+.haircut img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.haircut-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: rgb(31, 31, 31);
+  z-index: 99;
+}
+
+.haircut-info button {
+  color: black;
+  background-color: rgb(255, 45, 45);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+  font-size: 10px;
+  width: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .haircuts {
+    flex-direction: column;
+  }
+  .haircuts img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 0px;
+  color: black;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-icons i {
+  color: black;
+}
+
+.footer img {
+  width: 200px;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+}
+.btn-whatsapp i {
+  font-size: 30px;
+  color: white;
+  background-color: green;
+  padding: 10px 13px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.btn-whatsapp i:hover {
+  padding: 15px 18px;
+  background-color: black;
+  color: green;
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 200px;
+  top: 8px;
+  left: -205px;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  i {
+    font-size: 20px;
+  }
+  .footer p {
+    width: 350px;
+    margin-left: 30px;
+  }
+}
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Sora", sans-serif;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
